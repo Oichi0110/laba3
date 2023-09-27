@@ -17,7 +17,7 @@ def first_word_func(arr_lines):
 
 
 def f1_wrt(f1):
-    with open(f1, "w+") as file:
+    with open(f1, "w+", encoding='utf-8') as file:
         running = True
         while running:
             string = input("Введите строку: ")
@@ -27,8 +27,8 @@ def f1_wrt(f1):
 
 
 def f1_copy_in_f2(f1, f2):
-    with open(f1, "r") as fileF1:
-        with open(f2, "w+") as fileF2:
+    with open(f1, "r", encoding='utf-8') as fileF1:
+        with open(f2, "w+", encoding='utf-8') as fileF2:
             lines = fileF1.readlines()
             first_word = first_word_func(lines)
             for i in lines:
@@ -40,7 +40,7 @@ def f1_copy_in_f2(f1, f2):
 
 def count_func(f2):
     count = 0
-    with open(f2, "r") as file:
+    with open(f2, "r", encoding='utf-8') as file:
         line = file.readline()
         constant = 'бвгджзйклмнпрстфхцчшщbcdfghjklmnpqrstvwxyz'
         line = line.lower()
